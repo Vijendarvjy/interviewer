@@ -1,0 +1,229 @@
+Database tables created/verified
+App KETU v1.0.0 started
+INFO:     127.0.0.1:64619 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56589 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58464 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64442 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57052 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55722 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60172 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64384 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49637 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62758 - "GET /static/interview.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49637 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49637 - "GET /static/interview/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49637 - "GET /static/interview/lobby.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62758 - "GET /static/interview/auth.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49637 - "GET /static/interview/setup.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62758 - "GET /static/interview/calibration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49637 - "GET /static/interview/workspace.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55247 - "GET /static/interview/report.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49637 - "GET /static/interview/state.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51105 - "GET /static/interview/speech.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62758 - "GET /static/interview/router.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63786 - "GET /static/interview/dom.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51825 - "GET /static/interview/theme.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51105 - "GET /static/interview/proctoring.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63786 - "GET /static/interview/loader.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49637 - "GET /static/interview/timer.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60875 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56025 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56025 - "GET /admin HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56025 - "GET /static/admin.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:65291 - "GET /static/admin.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:65291 - "GET /static/admin/main.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:65291 - "GET /static/admin/state.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56025 - "GET /static/admin/candidates.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49300 - "GET /static/admin/layout.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49670 - "GET /static/admin/components/shell.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55189 - "GET /static/admin/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64360 - "GET /static/admin/sessions.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49670 - "GET /static/admin/components/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56025 - "GET /static/admin/components/login.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49300 - "GET /static/admin/utils.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55189 - "GET /static/admin/components/candidates.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:65291 - "GET /static/admin/components/sessions.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64360 - "GET /static/admin/components/sidebar.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65291 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64360 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61116 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61116 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49155 - "GET /static/interview.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49155 - "GET /static/interview/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49155 - "GET /static/interview/lobby.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64796 - "GET /static/interview/setup.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61116 - "GET /static/interview/auth.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49155 - "GET /static/interview/calibration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57952 - "GET /static/interview/report.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49969 - "GET /static/interview/speech.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56616 - "GET /static/interview/workspace.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61116 - "GET /static/interview/dom.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64796 - "GET /static/interview/theme.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56616 - "GET /static/interview/timer.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49155 - "GET /static/interview/router.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57952 - "GET /static/interview/state.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49969 - "GET /static/interview/proctoring.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64796 - "GET /static/interview/loader.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64796 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63861 - "GET /admin HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63861 - "GET /static/admin.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57629 - "GET /static/admin.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57629 - "GET /static/admin/main.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63861 - "GET /static/admin/candidates.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57629 - "GET /static/admin/state.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58857 - "GET /static/admin/components/shell.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57629 - "GET /static/admin/layout.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58857 - "GET /static/admin/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63861 - "GET /static/admin/sessions.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58857 - "GET /static/admin/components/candidates.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49792 - "GET /static/admin/components/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65309 - "GET /static/admin/components/sessions.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63554 - "GET /static/admin/components/login.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58857 - "GET /static/admin/components/sidebar.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57629 - "GET /static/admin/utils.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56972 - "POST /api/admin/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:53005 - "POST /api/admin/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53005 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52512 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59964 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58926 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64135 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59414 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53684 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56208 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61253 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61886 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65442 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58409 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58413 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58407 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59725 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52602 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50598 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58656 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56038 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56038 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56038 - "GET /static/interview/report.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62823 - "GET /static/interview/theme.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60333 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56084 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51378 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61939 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61939 - "GET /static/interview/app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64043 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61199 - "GET /admin HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61200 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61202 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64814 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54698 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62004 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62005 - "POST /api/interview/upload-resume HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62007 - "POST /api/interview/upload-resume HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62003 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54917 - "POST /api/interview/upload-resume HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/44 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/45 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/46 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/47 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/48 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/49 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/interview/report/f3e6b005-dacf-4c4a-88a4-556b8bc6987f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/interview/report/f3e6b005-dacf-4c4a-88a4-556b8bc6987f/download HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/admin/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/schedule HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/admin/sessions/aa3eb583-66bc-4c87-b128-4b200d131cb8/schedule-slot HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/interview/room-status?email=e2e.20260526144706%40example.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/proctoring/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/proctoring/status/aa3eb583-66bc-4c87-b128-4b200d131cb8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/interview/answer/aa3eb583-66bc-4c87-b128-4b200d131cb8/51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/interview/report/aa3eb583-66bc-4c87-b128-4b200d131cb8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/admin/sessions?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "GET /api/speech/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/speech/tts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/interview.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/interview/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/interview/theme.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/interview/router.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/interview/setup.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/interview/workspace.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/admin.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/admin.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/admin/main.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/admin/layout.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/admin/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/admin/sessions.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /static/admin/candidates.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56071 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65015 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57212 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57212 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64675 - "GET /static/interview.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57212 - "GET /static/interview/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64675 - "GET /static/interview/auth.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57212 - "GET /static/interview/lobby.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62530 - "GET /static/interview/calibration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53806 - "GET /static/interview/setup.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52933 - "GET /static/interview/workspace.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58634 - "GET /static/interview/report.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57212 - "GET /static/interview/speech.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62530 - "GET /static/interview/theme.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64675 - "GET /static/interview/router.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52933 - "GET /static/interview/dom.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53806 - "GET /static/interview/state.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58634 - "GET /static/interview/proctoring.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57212 - "GET /static/interview/loader.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62530 - "GET /static/interview/timer.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57212 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53363 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49651 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59596 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59596 - "GET /static/interview.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59596 - "GET /static/interview/app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59596 - "GET /static/interview/lobby.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52593 - "GET /static/interview/auth.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60564 - "GET /static/interview/calibration.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64373 - "GET /static/interview/setup.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:58947 - "GET /static/interview/report.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59299 - "GET /static/interview/workspace.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59596 - "GET /static/interview/speech.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52593 - "GET /static/interview/theme.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52593 - "GET /static/interview/dom.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:58947 - "GET /static/interview/proctoring.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59596 - "GET /static/interview/router.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59299 - "GET /static/interview/state.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64373 - "GET /static/interview/timer.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60564 - "GET /static/interview/loader.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:58855 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58855 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64741 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50632 - "GET /admin HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50632 - "GET /static/admin.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/main.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/state.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/candidates.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/components/shell.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/layout.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/sessions.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/utils.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54013 - "GET /static/admin/components/candidates.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/components/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54013 - "GET /static/admin/components/login.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50632 - "GET /static/admin/components/sessions.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54013 - "GET /static/admin/components/sidebar.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54013 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54013 - "GET /admin HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54013 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54957 - "GET /api/admin/sessions?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53702 - "GET /api/admin/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62633 - "GET /api/admin/dashboard HTTP/1.1" 200 OK

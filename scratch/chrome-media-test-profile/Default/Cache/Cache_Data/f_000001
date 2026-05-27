@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Candidate interview workspace for AI-assisted assessments, calibration, proctoring, and reports."/>
+  <title>KETU - Advanced Proctor-Enabled Interview Workspace</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body data-app="interview" class="theme-light">
+  <button type="button" id="interview-theme-toggle" class="interview-theme-toggle" title="Switch theme" aria-label="Switch theme">
+    <span class="theme-icon">N</span>
+    <span class="theme-label">Normal</span>
+  </button>
+
+  <!-- Global Stepper Tracker (visible on setup phases) -->
+  <div id="global-stepper" class="stepper-container">
+    <div class="step-dot active" id="step-1">1</div>
+    <div class="step-line" id="line-1"></div>
+    <div class="step-dot" id="step-2">2</div>
+    <div class="step-line" id="line-2"></div>
+    <div class="step-dot" id="step-3">3</div>
+    <div class="step-line" id="line-3"></div>
+    <div class="step-dot" id="step-4">4</div>
+  </div>
+
+  <!-- ── Step 1: Splash Lobby (`#page-lobby`) ───────────────────────────── -->
+  <div id="page-lobby" class="page">
+    <div class="lobby-container">
+      <div class="lobby-header">
+        <div class="lobby-logo">🛡️</div>
+        <h1 class="lobby-title">Welcome to <span class="gradient-text ketu-brand-text">KETU</span></h1>
+        <p class="lobby-subtitle">Next-generation, adaptive talent assessment powered by secure cognitive evaluation engines.</p>
+      </div>
+      <button id="btn-enter-lobby" class="btn-premium" style="font-size: 1.1rem; padding: 16px 36px; margin-top: 10px;">
+        <span>✨ Begin Assessment Workspace →</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Step 2: Advanced Profile Setup (`#page-landing`) ────────────────── -->
+  <div id="page-landing" class="page active">
+    <div class="register-container">
+      <div class="form-card glass-panel">
+        <div class="form-header">
+          <h2 id="candidate-panel-title">Candidate Access</h2>
+          <p id="candidate-panel-subtitle">Register once or login to access practice and scheduled interviews.</p>
+        </div>
+
+        <div id="candidate-auth-panel">
+          <div class="report-dashboard-tab-bar auth-tabs">
+            <button type="button" class="report-dashboard-tab-btn active" id="tab-register">Registration</button>
+            <button type="button" class="report-dashboard-tab-btn" id="tab-login">Login</button>
+          </div>
+
+          <form id="form-candidate-register" autocomplete="off">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reg-name">Full Name *</label>
+                <input id="reg-name" type="text" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <label for="reg-username">Username *</label>
+                <input id="reg-username" type="text" class="form-control" autocomplete="username" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reg-email">Email *</label>
+                <input id="reg-email" type="email" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <label for="reg-password">Password *</label>
+                <input id="reg-password" type="password" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <label for="reg-confirm-password">Confirm Password *</label>
+                <input id="reg-confirm-password" type="password" class="form-control" required/>
+              </div>
+            </div>
+            <button type="submit" class="btn-premium" style="width:100%;padding:14px;">Create Candidate Account</button>
+          </form>
+
+          <form id="form-candidate-login" class="mode-hidden" autocomplete="off">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="login-email">Username or Mail ID *</label>
+                <input id="login-email" type="text" class="form-control" placeholder="Enter username or mail id" autocomplete="username" required/>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password *</label>
+                <input id="login-password" type="password" class="form-control" required/>
+              </div>
+            </div>
+            <button type="submit" class="btn-premium" style="width:100%;padding:14px;">Login</button>
+            <button type="button" id="btn-forgot-password" class="btn-secondary-premium" style="width:100%;margin-top:10px;padding:12px;">Forgot Password</button>
+          </form>
+
+          <form id="form-reset-password" class="mode-hidden" autocomplete="off">
+            <div class="form-group">
+              <label for="reset-email">Registered Email *</label>
+              <input id="reset-email" type="email" class="form-control" required/>
+            </div>
+            <button type="submit" class="btn-premium" style="width:100%;padding:14px;">Send Reset Link</button>
+            <div id="reset-link-box" class="schedule-status-panel hidden"></div>
+          </form>
+
+          <form id="form-new-password" class="mode-hidden" autocomplete="off">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="new-password">New Password *</label>
+                <input id="new-password" type="password" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <label for="new-confirm-password">Confirm Password *</label>
+                <input id="new-confirm-password" type="password" class="form-control" required/>
+              </div>
+            </div>
+            <button type="submit" class="btn-premium" style="width:100%;padding:14px;">Set New Password</button>
+          </form>
+
+          <div id="auth-status" class="schedule-status-panel hidden"></div>
+        </div>
+
+        <form id="form-register" class="mode-hidden" autocomplete="off">
+          <div class="report-dashboard-tab-bar auth-tabs">
+            <button type="button" class="report-dashboard-tab-btn active" id="mode-interview">Interview Mode</button>
+            <button type="button" class="report-dashboard-tab-btn" id="mode-practice">Practice Mode</button>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inp-name">Full Name *</label>
+              <input id="inp-name" type="text" class="form-control" placeholder="John Doe" required/>
+            </div>
+            <div class="form-group">
+              <label for="inp-email">Email *</label>
+              <input id="inp-email" type="email" class="form-control" placeholder="john@example.com" required/>
+            </div>
+          </div>
+
+          <div class="form-row interview-only">
+            <div class="form-group">
+              <label for="inp-phone">Phone Number</label>
+              <input id="inp-phone" type="tel" class="form-control" placeholder="+1 (555) 000-0000"/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group interview-only">
+              <label for="inp-exp">Experience (Years) *</label>
+              <input id="inp-exp" type="number" class="form-control" min="0" max="50" value="3" required/>
+            </div>
+            <div class="form-group skills-tag-wrap">
+              <label for="inp-skills">Key Tech Skills (Comma separated)</label>
+              <div class="skills-input-field">
+                <input id="inp-skills" type="text" class="form-control" placeholder="Python, Django, React, AWS"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group mode-hidden">
+              <label for="sel-mode">Session Mode</label>
+              <select id="sel-mode" class="form-control">
+                <option value="interview" selected>Scheduled Interview Room</option>
+                <option value="practice">Practice Interview (2 attempts)</option>
+              </select>
+            </div>
+            <div class="form-group profile-match-material">
+              <label for="inp-resume-file">Upload Resume *</label>
+              <input id="inp-resume-file" type="file" class="form-control" accept=".pdf,.docx,.txt"/>
+              <textarea id="inp-resume" class="form-control mode-hidden" rows="3" placeholder="Resume text will be extracted after upload"></textarea>
+              <div id="resume-upload-status" class="schedule-status-panel hidden"></div>
+            </div>
+          </div>
+
+          <div class="form-group profile-match-material">
+            <label for="inp-jd">Job Description *</label>
+            <textarea id="inp-jd" class="form-control" rows="4" placeholder="Paste the JD so questions match the role"></textarea>
+          </div>
+
+          <div id="schedule-status" class="schedule-status-panel hidden"></div>
+
+          <button type="submit" id="btn-start" class="btn-premium" style="width: 100%; margin-top: 15px; padding: 16px;">
+            <span>🎯 Configure Assessment →</span>
+          </button>
+          <button type="button" id="btn-check-room" class="btn-secondary-premium" style="width: 100%; margin-top: 12px; padding: 14px; display:none;">
+            Check Scheduled Slot
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Step 3: Hardware Check & Calibration (`#page-calibration`) ───────── -->
+  <div id="page-calibration" class="page">
+    <div class="calibration-container">
+      <div class="calibration-grid">
+        <!-- Webcam feed block -->
+        <div class="webcam-calibration-card glass-panel" style="padding: 24px;">
+          <h3 class="checklist-title" style="width: 100%; text-align: left; margin-bottom: 16px;">Camera Calibration</h3>
+          <div class="camera-view-wrapper">
+            <video id="calib-webcam" class="calibration-webcam" autoplay muted></video>
+            <div class="camera-overlay-frame"></div>
+            <div class="camera-status-tag" id="camera-badge">
+              <div class="tag-dot"></div>
+              <span id="camera-status-text">OFFLINE</span>
+            </div>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 12px; text-align: center;">
+            Position your face centrally in the frame. The AI proctor logs anomalies if focus leaves the frame.
+          </p>
+        </div>
+
+        <!-- Checklist block -->
+        <div class="hardware-checklist-card glass-panel">
+          <h3 class="checklist-title">Hardware Readiness</h3>
+          
+          <div class="checklist-item" id="item-video">
+            <div class="checklist-indicator">📸</div>
+            <div class="checklist-details">
+              <h4>Webcam Feeds</h4>
+              <p id="desc-video">Checking webcam permissions...</p>
+            </div>
+            <button class="btn-secondary-premium checklist-action-btn" id="btn-retry-video">Allow Camera</button>
+          </div>
+
+          <div class="checklist-item" id="item-audio">
+            <div class="checklist-indicator">🎙️</div>
+            <div class="checklist-details">
+              <h4>Microphone Levels</h4>
+              <p id="desc-audio">Test mic sensitivity by speaking.</p>
+              <div class="volume-meter-wrapper">
+                <div class="volume-meter-bar" id="mic-volume-bar"></div>
+              </div>
+            </div>
+            <button class="btn-secondary-premium checklist-action-btn" id="btn-test-mic">Calibrate Mic</button>
+          </div>
+
+          <div class="checklist-item" id="item-speaker">
+            <div class="checklist-indicator">🔊</div>
+            <div class="checklist-details">
+              <h4>Audio Speaker</h4>
+              <p id="desc-speaker">Play a test sound to calibrate speech output.</p>
+            </div>
+            <button class="btn-secondary-premium checklist-action-btn" id="btn-play-test-sound">Test Sound</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-panel" style="padding: 20px; text-align: center;">
+        <button id="btn-calibration-ready" class="btn-premium" style="width: 100%; max-width: 320px;" disabled>
+          <span>🚀 Launch AI Workspace →</span>
+        </button>
+        <p style="font-size: 0.78rem; color: var(--rose); margin-top: 10px;">
+          🚨 *By entering the exam workspace, you consent to real-time proctoring telemetry.*
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Step 4: Active Interview Workspace (`#page-interview`) ─────────── -->
+  <div id="page-interview" class="page">
+    <div class="interview-layout">
+      
+      <!-- Side Panel: AI Hologram Avatar & Chat Conversation Log -->
+      <aside class="interview-side-console">
+        <div class="ai-avatar-console-card">
+          <div class="ai-hologram-viewport">
+            <div class="ai-hologram-avatar" id="ai-avatar">🤖</div>
+            <div class="hologram-ring"></div>
+            <div class="hologram-ring-inner"></div>
+          </div>
+          <div class="ai-status-bubble" id="ai-status">Thinking...</div>
+        </div>
+
+        <!-- Chat Stream logs -->
+        <div class="chat-console-window" id="chat-window"></div>
+      </aside>
+
+      <!-- Main Panel: Workspace Terminal -->
+      <main class="interview-main-cockpit">
+        <!-- Cockpit Header -->
+        <header class="cockpit-header">
+          <div>
+            <div class="cockpit-brand"><span class="gradient-text ketu-brand-text">KETU WORKSPACE</span></div>
+            <span class="candidate-badge-hdr" id="hdr-info">John Doe — Technical Depth Evaluation</span>
+          </div>
+          <div class="cockpit-header-right">
+            <div class="stepper-header-tracker">
+              <span class="stepper-hdr-label" id="hdr-progress">Q 1/10</span>
+              <div class="stepper-hdr-bar-bg">
+                <div class="stepper-hdr-bar-fill" id="progress-bar"></div>
+              </div>
+            </div>
+            <div class="cockpit-timer" id="timer">00:00</div>
+          </div>
+        </header>
+
+        <!-- Dynamic Inner Grid (Primary console / Telemetry monitoring) -->
+        <div class="cockpit-workspace-grid">
+          <!-- Workspace Console -->
+          <div class="cockpit-primary-screen">
+            <!-- Question Screen -->
+            <div class="question-panel-premium glass-panel" id="question-display">
+              <div class="question-label-hdr">Active Evaluation Target</div>
+              <h2 class="question-text-field" id="q-text">Loading question structure...</h2>
+              <div class="question-metadata-chips">
+                <span id="q-category" class="meta-chip-premium category">General Concepts</span>
+                <span id="q-difficulty" class="meta-chip-premium difficulty">Medium Level</span>
+                <span id="q-number" class="meta-chip-premium">Q 1 of 8</span>
+              </div>
+            </div>
+
+            <!-- Answer Terminal -->
+            <div class="response-console-card glass-panel">
+              <div class="speech-visualizer-console">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                  <button id="btn-mic" class="speech-mic-btn-premium" title="Activate Speech Recognition">🎙️</button>
+                  <div class="speech-status-bar">
+                    <span id="mic-label" class="speech-status-text">Click mic to dictate response</span>
+                    <span id="mic-status" class="speech-live-hearing"></span>
+                  </div>
+                </div>
+                <!-- Real-time dynamic audio wave canvas -->
+                <canvas id="audio-wave-canvas" class="canvas-audio-wave"></canvas>
+              </div>
+
+              <!-- Input Editor -->
+              <textarea id="ans-textarea" class="editor-textarea-premium" 
+                placeholder="Draft your structural response here... You can also dictate using the speech panel above. Make sure your key arguments are clearly outlined before submitting."></textarea>
+
+              <!-- Controls -->
+              <div class="response-actions-wrap">
+                <button id="btn-clear" class="btn-secondary-premium">🧹 Clear Draft</button>
+                <button id="btn-submit" class="btn-premium">✅ Submit Evaluation →</button>
+              </div>
+            </div>
+
+            <!-- Dynamic Feedback Box -->
+            <div id="feedback-box" class="active-evaluation-feedback-panel hidden">
+              <div class="eval-hdr-wrap">
+                <span class="eval-hdr-title">Real-Time Evaluation Results</span>
+                <span id="score-badge" class="eval-score-badge">7.5 / 10</span>
+              </div>
+              <p id="feedback-text" class="eval-desc-text"></p>
+            </div>
+          </div>
+
+          <!-- Integrity Telemetry Mirror Sidebar -->
+          <aside class="cockpit-telemetry-sidebar">
+            <div class="telemetry-header-title">Webcam Monitor</div>
+            <div class="candidate-mirror-camera-panel">
+              <video id="proctor-webcam" class="candidate-live-webcam-feed" autoplay muted></video>
+              <div class="webcam-overlay-indicator-wrap">LIVE PROCTOR FEED</div>
+            </div>
+
+            <div class="telemetry-header-title">Cognitive Integrity</div>
+            <div class="integrity-telemetry-monitor-card glass-panel">
+              <div class="trust-index-visualizer">
+                <div class="trust-dial-ring-wrap">
+                  <svg class="trust-radial-ring" viewBox="0 0 40 40">
+                    <circle cx="20" cy="20" r="18" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="3"/>
+                    <circle cx="20" cy="20" r="18" fill="none" stroke="var(--emerald)" stroke-width="3" 
+                      stroke-dasharray="113" stroke-dashoffset="0" id="trust-indicator-circle"/>
+                  </svg>
+                  <div class="trust-score-digital" id="trust-index-score">10.0</div>
+                </div>
+                <div class="trust-meta-description">
+                  <h5>Integrity Rating</h5>
+                  <p id="trust-index-text">Optimal Trust</p>
+                </div>
+              </div>
+
+              <!-- Integrity telemetry feed -->
+              <div class="proctoring-telemetry-checklist">
+                <div class="telemetry-row-item">
+                  <span>Gaze Alignment</span>
+                  <b id="status-gaze">Coaligned</b>
+                </div>
+                <div class="telemetry-row-item">
+                  <span>Human Count</span>
+                  <b id="status-faces">1 Detected</b>
+                </div>
+                <div class="telemetry-row-item">
+                  <span>Active Flags</span>
+                  <b id="status-flags" style="color:var(--text-muted);">None</b>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ── Step 5: Advanced Evaluator Loading (`#page-loading`) ────────────── -->
+  <div id="page-loading" class="page">
+    <div class="loading-engine-container">
+      <div class="loading-portal-viewport">
+        <div class="loading-portal-ring-outer"></div>
+        <div class="loading-portal-ring-inner"></div>
+        <div class="loading-portal-core">🔮</div>
+      </div>
+      <h2 class="loading-analysis-title">Synthesizing Evaluation</h2>
+      <p class="loading-analysis-desc">KETU cognitive parser is correlating speech markers and technical responses against target criteria profiles.</p>
+
+      <div class="loading-stage-process-list">
+        <div class="loading-stage-item completed" id="stage-transcripts">
+          <div class="loading-stage-bullet"></div>
+          <span>Aligning speech transcript metrics...</span>
+        </div>
+        <div class="loading-stage-item active" id="stage-rubrics">
+          <div class="loading-stage-bullet"></div>
+          <span>Correlating assessment grading rubrics...</span>
+        </div>
+        <div class="loading-stage-item" id="stage-integrity">
+          <div class="loading-stage-bullet"></div>
+          <span>Parsing proctoring event telemetry logs...</span>
+        </div>
+        <div class="loading-stage-item" id="stage-insights">
+          <div class="loading-stage-bullet"></div>
+          <span>Compiling Strengths & Executive Summaries...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Step 6: Interactive Assessment Report (`#page-report`) ──────────── -->
+  <div id="page-report" class="page">
+    <div class="report-layout-container">
+      <!-- Executive Hero Header -->
+      <div class="report-hero-header-card glass-panel">
+        <div class="report-badge-status-top">Evaluation Finalized</div>
+        <h1 class="report-executive-title">Candidate Assessment <span class="gradient-text">Report</span></h1>
+        <p class="report-executive-subtitle" id="rpt-subtitle">John Doe — Senior Technical Evaluation</p>
+      </div>
+
+      <!-- Highlights Grid -->
+      <div class="report-dashboard-highlights-grid">
+        <!-- SVG Gauge dial -->
+        <div class="report-score-gauge-card glass-panel">
+          <div class="radial-score-gauge-wrap">
+            <svg class="radial-score-ring-svg" viewBox="0 0 140 140">
+              <defs>
+                <linearGradient id="activeScoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--accent)"/>
+                  <stop offset="100%" stop-color="var(--cyan)"/>
+                </linearGradient>
+              </defs>
+              <circle class="radial-ring-background-track" cx="70" cy="70" r="60"/>
+              <!-- Stroke perimeter is 2 * PI * r = 377 -->
+              <circle class="radial-ring-active-indicator" cx="70" cy="70" r="60" 
+                stroke-dasharray="377" stroke-dashoffset="377" id="ring-fill"/>
+            </svg>
+            <div class="score-digital-readout">
+              <span class="huge-digit" id="rpt-score">8.7</span>
+              <span class="score-ceiling">SCORE / 10</span>
+            </div>
+          </div>
+          <div class="score-level-recommendation-tag rec-high-praise" id="recommendation-box">
+            Recommended
+          </div>
+        </div>
+
+        <!-- Metric Details Panel -->
+        <div class="metadata-highlights-executive-panel glass-panel">
+          <div class="highlights-bullet-item">
+            <div class="highlight-bullet-badge">🎯</div>
+            <div class="highlights-bullet-details">
+              <h4>Objective Mode</h4>
+              <p id="rpt-type">Technical Depth Assessment</p>
+            </div>
+          </div>
+          <div class="highlights-bullet-item">
+            <div class="highlight-bullet-badge">⏱️</div>
+            <div class="highlights-bullet-details">
+              <h4>Session Duration</h4>
+              <p id="rpt-duration">18.4 minutes</p>
+            </div>
+          </div>
+          <div class="highlights-bullet-item">
+            <div class="highlight-bullet-badge">🧪</div>
+            <div class="highlights-bullet-details">
+              <h4>Graded Rubrics</h4>
+              <p id="rpt-questions">8 / 8 Questions Answered</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strengths and Improvements Columns -->
+      <div class="insights-executive-double-column">
+        <div class="insight-pinnacle-card strengths glass-panel">
+          <h3><span>🌟</span> Key Cognitive Strengths</h3>
+          <ul class="insight-list-item-bullet" id="rpt-strengths">
+            <li>Exemplary understanding of scalable backend microservices architectures.</li>
+            <li>Precise and clear verbal formulation of engineering concepts.</li>
+          </ul>
+        </div>
+
+        <div class="insight-pinnacle-card improvements glass-panel">
+          <h3><span>🚀</span> Development Enhancements</h3>
+          <ul class="insight-list-item-bullet" id="rpt-improvements">
+            <li>Could articulate edge-case caching validation patterns with deeper rigor.</li>
+            <li>Consider detailing CAP-theorem tradeoffs explicitly.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="report-dashboard-tab-bar">
+        <button class="report-dashboard-tab-btn active" onclick="switchReportTab('transcript')">Response Log</button>
+        <button class="report-dashboard-tab-btn" onclick="switchReportTab('proctoring')">Integrity Audit</button>
+      </div>
+
+      <!-- Tab Viewports -->
+      <div class="report-tab-panel-viewport">
+        <!-- Tab 1: Timeline -->
+        <div id="panel-transcript" class="report-tab-panel-content active">
+          <div class="qa-timeline-block" id="rpt-details"></div>
+        </div>
+
+        <!-- Tab 2: Integrity Audit -->
+        <div id="panel-proctoring" class="report-tab-panel-content">
+          <div class="glass-panel" style="padding: 24px; overflow-x: auto;">
+            <h3 style="font-size: 1.1rem; margin-bottom: 16px; font-weight: 700;">Cognitive Monitoring Audit Log</h3>
+            <table class="integrity-event-timeline-table">
+              <thead>
+                <tr>
+                  <th>Event Type</th>
+                  <th>Calibration Strength</th>
+                  <th>System Details</th>
+                  <th>Timestamps</th>
+                </tr>
+              </thead>
+              <tbody id="rpt-integrity-table-body">
+                <tr>
+                  <td colspan="4" style="text-align:center; padding: 30px; color: var(--text-dark);">
+                    No proctor flags logged. Clean integrity run.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="report-action-buttons-wrap">
+        <button id="btn-new" class="btn-premium">🔄 Reset assessment</button>
+        <a href="/admin" class="btn-secondary-premium" style="text-decoration:none;">📊 Admin Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Overlay spinner -->
+  <div id="overlay" class="loading-screen-global-overlay hidden">
+    <div class="spinner-premium"></div>
+    <p id="overlay-msg" class="spinner-msg-text">Calibrating Rubrics...</p>
+  </div>
+
+  <noscript>
+    <div class="loading-screen-global-overlay">
+      <div class="glass-panel" style="padding:24px;text-align:center;max-width:420px;">
+        <h1 style="font-size:1.4rem;margin-bottom:10px;">JavaScript Required</h1>
+        <p style="color:var(--text-muted);">Please enable JavaScript to use the interview workspace.</p>
+      </div>
+    </div>
+  </noscript>
+
+  <script src="/static/interview.js"></script>
+</body>
+</html>
+
