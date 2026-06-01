@@ -1,6 +1,6 @@
 INFO:     Will watch for changes in these directories: ['C:\\Users\\DELL\\Desktop\\ketu']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [16704] using StatReload
-INFO:     Started server process [1116]
+INFO:     Started reloader process [2316] using WatchFiles
+INFO:     Started server process [15072]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
